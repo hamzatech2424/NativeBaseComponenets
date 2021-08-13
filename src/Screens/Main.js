@@ -1,12 +1,17 @@
-import React from "react"
-import {View,Text,StyleSheet} from "react-native"
-import {Button} from "../Components/Native Base Components"
+import React,{useState} from "react"
+import { View, Text, StyleSheet } from "react-native"
+import { Button,Swittch,ButtonSummarise } from "../Components/Native Base Components"
+import CheckBox from '@react-native-community/checkbox';
 
 
 const Main = () => {
-    return(
+
+    
+    return (
         <View style={styles.container}>
-            <Button size={"sm"}  />
+              
+             <ButtonSummarise size={"lg"} isDisabled  />
+           
         </View>
     )
 }
@@ -14,10 +19,10 @@ const Main = () => {
 
 
 const styles = StyleSheet.create({
-    container:{
-        flex:1,
-        justifyContent:"center",
-        alignItems:"center"
+    container: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center"
     }
 })
 
