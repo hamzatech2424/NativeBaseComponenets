@@ -47,6 +47,25 @@ const ButtonSummarise = ({ size, variant, colorScheme, fontsize, isLoading, isDi
     const btnFontsize = fontsize ? fontsize : 15
     const btnIsloadingText = isLoadingText ? isLoadingText : "hamza"
 
+    let btnSize = NativeSize.xs
+
+
+    if(size == "xs"){
+        btnSize = NativeSize.xs
+    }
+    else if(size == "sm"){
+        btnSize = NativeSize.sm
+    }
+    else if(size == "md"){
+        btnSize = NativeSize.md
+    }
+    else if(size == "lg"){
+        btnSize = NativeSize.md
+    }
+    else {
+        btnSize = NativeSize.xs
+    }
+
 
     return (
 
@@ -59,11 +78,7 @@ const ButtonSummarise = ({ size, variant, colorScheme, fontsize, isLoading, isDi
                     activeOpacity={isDisabled ? 1 : 0.7}
                     style={[
 
-                        (size == "xs") ? NativeSize.xs :
-                            (size == "sm") ? NativeSize.sm :
-                                (size == "md") ? NativeSize.md :
-                                    (size == "lg") ? NativeSize.lg :
-                                        NativeSize.s,
+                        btnSize,
 
                         { justifyContent: "center", alignItems: "center", borderRadius: 5, backgroundColor: "grey" }
 

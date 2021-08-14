@@ -1,16 +1,33 @@
 import React,{useState} from "react"
 import { View, Text, StyleSheet } from "react-native"
-import { Button,Swittch,ButtonSummarise } from "../Components/Native Base Components"
-import CheckBox from '@react-native-community/checkbox';
+import { Button,Swittch,ButtonSummarise,RadioButtons,TextInputCompo } from "../Components/Native Base Components"
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
 const Main = () => {
 
+ const [input,setInput] = useState("")    
+ const IconCompo = ({name,size,color}) => {
+    return (
+        <Ionicons name={name} size={size} color={color}  />
+    )
+}
+
     
     return (
         <View style={styles.container}>
+            <Text>{input}</Text>
               
-             <ButtonSummarise size={"lg"} isDisabled  />
+             <TextInputCompo 
+             size={"md"}
+             placeholder={"hamza here"}
+            
+
+            // password
+            //  Icon1={()=><IconCompo name={"call"} size={22} color={"skyblue"} />}
+            //  Icon2={()=><IconCompo name={"reader"} size={22} color={"skyblue"} />}
+            
+             />
            
         </View>
     )
