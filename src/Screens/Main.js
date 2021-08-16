@@ -1,6 +1,6 @@
 import React,{useState} from "react"
 import { View, Text, StyleSheet } from "react-native"
-import { Button,Swittch,ButtonSummarise,RadioButtons,TextInputCompo } from "../Components/Native Base Components"
+import { Button,Swittch,ButtonSummarise,RadioButtons,TextInputCompo,CheckBOX,TextArea,Link,Select,Sliderr } from "../Components/Native Base Components"
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
@@ -16,18 +16,11 @@ const Main = () => {
     
     return (
         <View style={styles.container}>
-            <Text>{input}</Text>
-              
-             <TextInputCompo 
-             size={"md"}
-             placeholder={"hamza here"}
-            
+            {/* <Text>{input}</Text> */}
 
-            // password
-            //  Icon1={()=><IconCompo name={"call"} size={22} color={"skyblue"} />}
-            //  Icon2={()=><IconCompo name={"reader"} size={22} color={"skyblue"} />}
-            
-             />
+               <Sliderr colorScheme={"secondary"}  />
+         
+           
            
         </View>
     )
